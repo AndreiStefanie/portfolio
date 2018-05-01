@@ -45,5 +45,8 @@ module.exports = {
       component: 'fa', 
       imports: []
     }]
-  ]
+  ],
+  plugins: [
+    { src: '~/plugins/vue-scroll-reveal', ssr: false }
+  ],
 }

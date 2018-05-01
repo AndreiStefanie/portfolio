@@ -5,13 +5,21 @@
     </div>
     <div class="row full-row colors-3">
       <div class="m-auto">
-        <h2 class="text-center">Projects</h2>
-        <projects :limit="3" class="text-primary"/>
+        <h2 class="text-center">
+          <router-link to="/projects" class="text-light">
+            <a>Projects</a>
+          </router-link>
+        </h2>
+        <projects v-scroll-reveal :limit="3" class="text-primary d-none d-lg-block"/>
       </div>
     </div>
     <div class="row full-row colors-5">
       <div class="m-auto">
-        <h2>About Me</h2>
+        <h2 class="text-center">
+          <router-link to="/about">
+            <a>About Me</a>
+          </router-link>
+        </h2>
         <about/>
       </div>
     </div>
