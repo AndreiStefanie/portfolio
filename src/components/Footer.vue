@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="row quarter-row row-4">
+    <div class="row quarter-row colors-4">
       <div class="m-auto">
         <a href="https://github.com/" target="_blank">
           <fa :icon="github" style="font-size:24px"/>
