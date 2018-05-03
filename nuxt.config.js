@@ -42,7 +42,7 @@ module.exports = {
   modules: [
     ['bootstrap-vue/nuxt', { css: false }],
     ['nuxt-fontawesome', {
-      component: 'fa', 
+      component: 'fa',
       imports: []
     }]
   ],
