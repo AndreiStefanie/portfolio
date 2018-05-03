@@ -3,9 +3,6 @@ module.exports = {
     '@/assets/css/main.scss'
   ],
   srcDir: 'src/',
-  generate: {
-    dir: 'docs'
-  },
   /*
   ** Headers of the page
   */
