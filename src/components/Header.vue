@@ -1,7 +1,7 @@
 <template>
   <b-navbar toggleable="md" type="dark" variant="primary" sticky>
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand href="/">
+    <b-navbar-brand to="/">
       Andrei's Portfolio
     </b-navbar-brand>
     <b-collapse is-nav id="nav_collapse">
@@ -10,7 +10,8 @@
           class="ml-4"
           v-for="p in pages"
           :key="p.name"
-          :href="p.link">
+          :to="p.link"
+        >
           {{ p.name }}
         </b-nav-item>
       </b-navbar-nav>

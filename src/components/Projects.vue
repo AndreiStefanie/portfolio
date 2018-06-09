@@ -10,9 +10,7 @@
             <img class="card-img-top main-img card-img-fluid" :src="p.image">
           </template>
           <h3 class="card-title">{{ p.name }}</h3>
-          <p class="card-text">
-            {{ p.description }}
-          </p>
+          <p class="card-text" v-html="p.description"/>
           <template slot="footer">
             <h5 class="text-light">
               <b-badge v-for="(t, index) in p.tags" :key="index" class="m-1" variant="info">
