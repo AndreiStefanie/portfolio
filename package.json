@@ -22,8 +22,8 @@
   "license": "MIT",
   "homepage": "https://github.com/AndreiStefanie/portfolio#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free-brands": "^5.0.9",
-    "@fortawesome/fontawesome-free-regular": "^5.0.9",
+    "@fortawesome/fontawesome-free-brands": "^5.0.13",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
     "bootstrap-vue": "^2.0.0-rc.6",
     "nuxt": "^1.4.0",
     "nuxt-fontawesome": "^0.1.3",
