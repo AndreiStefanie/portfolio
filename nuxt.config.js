@@ -47,6 +47,7 @@ module.exports = {
     }]
   ],
   plugins: [
-    { src: '~/plugins/vue-scroll-reveal', ssr: false }
+    { src: '~/plugins/vue-scroll-reveal', ssr: false },
+    { src: '~/plugins/vue-scrollto' }
   ],
 }
