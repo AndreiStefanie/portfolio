@@ -50,6 +50,14 @@ html {
   flex: none;
 }
 
+.header {
+  box-shadow: 2px 0 10px 3px rgba(0,0,0,0.3);
+}
+
+.footer {
+  box-shadow: -2px 0 10px 3px rgba(0,0,0,0.3);
+}
+
 .content {
   flex: 1 0 auto;
   align-self: center;

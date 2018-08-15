@@ -3,3 +3,7 @@ $theme-colors: (
   "warning": $color-5,
   "info": $color-3
 );
+
+.card {
+  box-shadow: 3px 3px 10px #888888;
+}
