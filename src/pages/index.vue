@@ -35,7 +35,7 @@
         </b-card>
       </div>
       <div class="below text-center">
-        <div class="below-indicator d-none d-md-inlineblock">
+        <div class="below-indicator d-none">
           <transition name="rotate-out">
             <a v-if="!isBelow" href="#" v-scroll-to="'#below'" class="below-indicator">
               <fa :icon="below" style="font-size:40px"/>
@@ -134,6 +134,8 @@ export default {
 
 .below-indicator {
   position: absolute;
+  left: 49%;
+  z-index: 1;
   display: inline-block;
   color: whitesmoke !important;
 }

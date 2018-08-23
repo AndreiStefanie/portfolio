@@ -8,13 +8,13 @@ export default [
   },
   {
     name: 'msg.PUMA',
-    description: 'Lorem ipsum dolor sit amet, ne animal laboramus nec, id quo sonet fabulas feugait. Viris honestatis no est. His ea dico eleifend, insolens indoctum cum ea. Ad sed sale aeterno habemus. Quo reprehendunt vituperatoribus ut, quo ex oblique virtute prodesset.',
-    tags: ['Abap', 'Floor Plan Manager', 'FS-RI'],
+    description: 'Built on top of the widely used SAP FS-RI module, msg.<strong>PUMA</strong> (<strong>P</strong>rofessional <strong>U</strong>nderwriting <strong>M</strong>anagement <strong>A</strong>pplication) covers all the standard processes required by the facultative reinsurance business and much more. It will forever be one of my favorite projects. Really nice team, well structured and planned project, and very interesting from both technical and business points of view.',
+    tags: ['Abap', 'Floor Plan Manager', 'FS-RI', 'SAP'],
     image: '/placeholder.png'
   },
   {
     name: 'msg.WorkManagement',
-    description: 'Lorem ipsum dolor sit amet, ne animal laboramus nec, id quo sonet fabulas feugait. Viris honestatis no est. His ea dico eleifend, insolens indoctum cum ea. Ad sed sale aeterno habemus. Quo reprehendunt vituperatoribus ut, quo ex oblique virtute prodesset.',
+    description: 'I proposed this as an introductory project for a few new colleagues. It turned out that the company could actually use it since the target business case (project assignments mainly) was handled through a huge excel file. The overall feedback received from the managers was very positive and I was also impressed by the amount of work my colleagues put into it.',
     tags: ['Abap', 'Floor Plan Manager'],
     image: '/placeholder.png'
   },
@@ -27,7 +27,7 @@ export default [
   },
   {
     name: 'msg.myWorkPlace',
-    description: 'Lorem ipsum dolor sit amet, ne animal laboramus nec, id quo sonet fabulas feugait. Viris honestatis no est. His ea dico eleifend, insolens indoctum cum ea. Ad sed sale aeterno habemus. Quo reprehendunt vituperatoribus ut, quo ex oblique virtute prodesset.',
+    description: '',
     tags: ['Abap', 'UI5', 'Cordova', 'Floor Plan Manager'],
     image: '/placeholder.png'
   },
@@ -46,7 +46,7 @@ export default [
   },
   {
     name: 'FileParser',
-    description: 'Lorem ipsum dolor sit amet, ne animal laboramus nec, id quo sonet fabulas feugait. Viris honestatis no est. His ea dico eleifend, insolens indoctum cum ea. Ad sed sale aeterno habemus. Quo reprehendunt vituperatoribus ut, quo ex oblique virtute prodesset.',
+    description: '',
     tags: [],
     image: '/placeholder.png',
     source: 'https://github.com/AndreiStefanie/fileParser'
