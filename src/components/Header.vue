@@ -1,43 +1,62 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="primary" sticky>
-    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-navbar-brand to="/" class="text-warning">
-      <b>Work in progress</b>
-    </b-navbar-brand>
-    <b-collapse is-nav id="nav_collapse">
-      <b-navbar-nav>
-        <b-nav-item
-          class="ml-4"
+  <header>
+    <div :class="[ 'menu-btn', { 'close': showMenu } ]" @click="toggleMenu">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav :class="[ 'menu', { 'show': showMenu } ]">
+      <div :class="[ 'menu-branding', { 'show': showMenu } ]">
+        <div class="portrait"></div>
+      </div>
+      <ul :class="[ 'menu-nav', { 'show': showMenu } ]">
+        <nuxt-link
           v-for="p in pages"
           :key="p.name"
           :to="p.link"
-        >
+          tag="a"
+          :class="[ 'nav-item', { 'current': p.link===$route.path }, 'nav-link', { 'show': showMenu } ]"
+          @click.native="hideMenu">
           {{ p.name }}
-        </b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+        </nuxt-link>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
 export default {
   name: 'Header',
-  data () {
+  data() {
     return {
+      showMenu: false,
       pages: [
         {
-          name: 'Projects',
-          link: '/projects'
+          name: 'Home',
+          link: '/'
         },
         {
           name: 'About Me',
           link: '/about'
         },
         {
+          name: 'My Work',
+          link: '/projects'
+        },
+        {
           name: 'Current Interests',
           link: '/currently'
         }
       ]
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu
+    },
+    hideMenu() {
+      this.showMenu = false
     }
   }
 }

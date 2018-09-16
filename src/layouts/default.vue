@@ -1,7 +1,9 @@
 <template>
   <div id="default">
     <navbar class="header"/>
-    <nuxt class="content"/>
+    <div class="content">
+      <nuxt/>
+    </div>
     <footer-bar class="footer"/>
   </div>
 </template>
@@ -56,11 +58,12 @@ html {
 
 .footer {
   box-shadow: -2px 0 10px 3px rgba(0,0,0,0.3);
+  padding: 1rem 0;
 }
 
 .content {
-  flex: 1 0 auto;
-  align-self: center;
+  flex: 1 1 auto;
+  z-index: 0;
 }
 
 /* width */

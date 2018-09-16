@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <!-- <div class="container-fluid">
     <section class="row full-row pb-4 pb-md-0 colors-1" id="welcome">
       <div class="col-12 m-auto pt-2 pt-md-0 pb-2 pb-md-0">
         <h1 class="text-center">Hi</h1>
@@ -8,20 +8,19 @@
         <b-card text-variant="dark">
           <b-media>
             <div slot="aside" class="d-none d-md-block">
-              <b-img rounded="circle" block center src="/me.jpg" thumbnail/>
             </div>
             <b-img rounded="circle" class="d-block d-md-none" block center src="/me.jpg" thumbnail/>
             <h5 class="mt-0 ">Welcome to my portfolio!</h5>
             <p>
               My name is Andrei Petru Ștefănie. I am an enthusiastic and positive person working in the tech industry.
               <br>
-              If you want to read more about me, check out the <b-link to="about" class="link-text">About Me</b-link> page.
+              If you want to read more about me, check out the <nuxt-link to="about" class="link-text">About Me</nuxt-link> page.
             </p>
             <p>
-              I guess you are here to see the stuff I built or contributed to. For this, check out my <b-link to="projects" class="link-text">Projects</b-link>.
+              I guess you are here to see the stuff I built or contributed to. For this, check out my <nuxt-link to="projects" class="link-text">Projects</nuxt-link>.
             </p>
             <p>
-              Also, if you are looking to get started with something, but don't know what yet, check out my <b-link to="currently" class="link-text">Current Interests</b-link>.
+              Also, if you are looking to get started with something, but don't know what yet, check out my <nuxt-link to="currently" class="link-text">Current Interests</nuxt-link>.
             </p>
             <b-media>
               <fa :icon="quote" style="font-size:40px" slot="aside"/>
@@ -29,7 +28,7 @@
               <p class="mb-0">
                 <i>Good people learn from their mistakes, but the great ones learn also from the mistakes of others</i>
               </p>
-              <small>Get started by checking out my <b-link to="#" class="link-text"><s>Blog</s></b-link> (upcomming)</small>
+              <small>Get started by checking out my <nuxt-link to="#" class="link-text"><s>Blog</s></nuxt-link> (upcomming)</small>
             </b-media>
           </b-media>
         </b-card>
@@ -57,123 +56,66 @@
         </b-card>
       </div>
     </section>
+  </div> -->
+  <div id="bg-img">
+    <main id="home">
+      <h1 class="lg-heading">
+        Andrei
+        <span class="text-secondary">Ștefănie</span>
+      </h1>
+      <h2 class="sm-heading">
+        Optimist, Tech Enthusiast, Engineer
+      </h2>
+      <div class="sm-heading">
+        <h3><strong>Welcome to my portfolio!</strong></h3>
+        <p>
+          My name is Andrei Petru Ștefănie. I am an enthusiastic and positive person working in the tech industry.
+          <br>
+          If you want to read more about me, check out the <nuxt-link to="about" class="link-text">About Me</nuxt-link> page.
+        </p>
+        <p>
+          I guess you are here to see the stuff I built or contributed to. For this, check out my <nuxt-link to="projects" class="link-text">Projects</nuxt-link>.
+        </p>
+        <p>
+          Also, if you are looking to get started with something, but don't know what yet, check out my <nuxt-link to="currently" class="link-text">Current Interests</nuxt-link>.
+        </p>
+      </div>
+      <div class="icons">
+        <a v-for="l in links" :key="l.url"
+          :href="l.url" target="_blank" rel="noopener">
+          <i :class="[ 'fab', `fa-${l.icon}`, 'fa-2x' ]"></i>
+        </a>
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-import Projects from "~/components/Projects";
-import About from "~/components/About";
-import projects from "~/assets/js/projects";
-import { faArrowAltCircleDown, faArrowAltCircleUp } from "@fortawesome/fontawesome-free-regular";
-import { faQuoteLeft } from "@fortawesome/fontawesome-free-solid";
+import projects from '~/assets/js/projects'
 
 export default {
-  components: {
-    Projects,
-    About
-  },
-  created () {
-    if(process.browser) {
-      document.getElementById('default').addEventListener('scroll', this.handleScroll);
-    }
-  },
-  destroyed () {
-    if(process.browser) {
-      document.getElementById('default').removeEventListener('scroll', this.handleScroll);
-    }
-  },
   data() {
     return {
-      position: 0,
-      isBelow: false
-    };
-  },
-  methods: {
-    handleScroll() {
-      if(process.browser) {
-        this.position = document.getElementById('default').scrollTop;
-      }
+      links: [
+        {
+          url: 'https://github.com/AndreiStefanie',
+          icon: 'github'
+        },
+        {
+          url: 'https://twitter.com/AndreiStefanie',
+          icon: 'twitter'
+        },
+        {
+          url: 'https://ro.linkedin.com/in/andrei-petru-stefanie-222378105/en',
+          icon: 'linkedin'
+        },
+        {
+          url: 'https://www.instagram.com/andrei.stefanie/?hl=en',
+          icon: 'instagram'
+        }
+      ]
     }
   },
-  computed: {
-    projects() {
-      return projects.slice(0, 5);
-    },
-    below() {
-      return faArrowAltCircleDown;
-    },
-    up() {
-      return faArrowAltCircleUp;
-    },
-    quote() {
-      return faQuoteLeft;
-    }
-  },
-  watch: {
-    position: function(newPosition) {
-      this.isBelow = document.getElementById('welcome').scrollHeight / 2 <= newPosition;
-    }
-  }
-};
+  scrollToTop: true
+}
 </script>
-
-<style lang="scss" scoped>
-.projects-demo {
-  height: 85%;
-  color: #333333;
-  text-shadow: 1px 1px 2px #333;
-}
-
-.below {
-  color: whitesmoke;
-  position: absolute;
-  top: 88%;
-  left: 0;
-  width: 100%;
-}
-
-.below-indicator {
-  position: absolute;
-  left: 49%;
-  z-index: 1;
-  display: inline-block;
-  color: whitesmoke !important;
-}
-
-.below-indicator:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-  transition-duration: 100ms;
-  color: #ead637 !important;
-  cursor: pointer;
-  height: 100%;
-}
-
-.link-text {
-  color: #643173;
-  font-weight: 600;
-}
-
-.rotate-out-leave-active {
-  -webkit-transition: all .8s ease-in-out;
-  -ms-transition: all .8s ease-in-out;
-  transition: all .8s ease-in-out;
-}
-
-.rotate-out-enter-active {
-  -webkit-transition: all .8s steps(1, end);
-  -ms-transition: all .8s steps(1, end);
-  transition: all .8s steps(1, end);
-}
-
-.rotate-out-leave-to {
-  transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-}
-
-.rotate-out-enter {
-  opacity: 0;
-}
-</style>

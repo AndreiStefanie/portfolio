@@ -1,6 +1,6 @@
 module.exports = {
   css: [
-    '@/assets/css/main.scss'
+    '@/assets/scss/main.scss'
   ],
   srcDir: 'src/',
   /*
@@ -14,13 +14,14 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Andrei Stefanie Portfolio' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.2.0/css/all.css' }
     ]
   },
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#ecc51f' },
+  loading: { color: '#eece1a' },
   /*
   ** Build configuration
   */
@@ -39,15 +40,9 @@ module.exports = {
       }
     }
   },
-  modules: [
-    ['bootstrap-vue/nuxt', { css: false }],
-    ['nuxt-fontawesome', {
-      component: 'fa',
-      imports: []
-    }]
-  ],
-  plugins: [
-    { src: '~/plugins/vue-scroll-reveal', ssr: false },
-    { src: '~/plugins/vue-scrollto' }
-  ],
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
+  }
 }

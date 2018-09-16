@@ -1,28 +1,19 @@
 <template>
-  <div class="container-fluid">
-    <div class="row quarter-row colors-4">
-      <div class="m-auto">
-        <a href="https://github.com/" target="_blank">
-          <fa :icon="github" style="font-size:24px"/>
-        </a>
-      </div>
-    </div>
+  <div class="footer">
+    <a href="https://github.com/" target="_blank" class="m-auto">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
   </div>
 </template>
 
 <script>
-import { faGithub } from '@fortawesome/fontawesome-free-brands'
-
 export default {
-  name: 'Footer',
-  computed: {
-    github () {
-      return faGithub
-    }
-  }
+  name: 'Footer'
 }
 </script>
 
 <style lang="scss" scoped>
-
+.footer {
+  text-align: center;
+}
 </style>

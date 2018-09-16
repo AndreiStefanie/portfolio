@@ -13,7 +13,7 @@ export default [
   },
   {
     name: 'Firebase',
-    description: `After watching a few videos from <a href="https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw">Google Developers</a> and <a href="https://www.youtube.com/channel/UCP4bf6IHJJQehibu6ai__cg">Firebase</a>, I got curious about it. The approach is quite different than our usual client-server one, but with the recent interest around serverless, I think it\'s a really good starting point`,
+    description: `After watching a few videos from <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw">Google Developers</a> and <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCP4bf6IHJJQehibu6ai__cg">Firebase</a>, I got curious about it. The approach is quite different than our usual client-server one, but with the recent interest around serverless, I think it\'s a really good starting point`,
     category: 'work',
     date: '15.07.2018'
   }
