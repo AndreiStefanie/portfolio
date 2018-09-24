@@ -1,12 +1,10 @@
 <template>
   <main>
-    <h1 class="lg-heading">
-      Current
-      <span class="text-secondary">Interests</span>
-    </h1>
-    <h2 class="sm-heading">
-      Some of the domains, projects, and activities that I currently focus on
-    </h2>
+    <Heading
+      h1="Current"
+      h1E="Interests"
+      h2="Some of the domains, projects, and activities that I currently focus on"
+    />
     <interests-container :interests="mostRecent" class="mb-4 mt-2"/>
     <!-- <b-btn v-if="old.length > 0" v-b-toggle.collapseI :variant="showOlder ? 'primary' : 'outline-primary'">
       Show older interests
@@ -20,13 +18,15 @@
 <script>
 import interests from '~/assets/js/interests'
 import InterestsContainer from '~/components/InterestsContainer'
+import Heading from '~/components/Heading'
 
 const threshold = 3
 
 export default {
   name: 'Interests',
   components: {
-    InterestsContainer
+    InterestsContainer,
+    Heading
   },
   data() {
     return {

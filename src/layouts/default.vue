@@ -58,7 +58,7 @@ html {
 
 .footer {
   box-shadow: -2px 0 10px 3px rgba(0,0,0,0.3);
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 }
 
 .content {

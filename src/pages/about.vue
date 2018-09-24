@@ -1,12 +1,11 @@
 <template>
   <main>
-    <h1 class="lg-heading">
-      About
-      <span class="text-secondary">Me</span>
-    </h1>
-    <h2 class="sm-heading">
-      A few words about me, my work, and my education
-    </h2>
+    <Heading
+      h1="About"
+      h1E="Me"
+      h2="A few words about me, my work, and my education"
+    >
+    </Heading>
     <div class="about-info">
       <div class="flex-container">
         <div class="w-33 flex-container">
@@ -39,11 +38,13 @@
 
 <script>
 import Card from '~/components/Card'
+import Heading from '~/components/Heading'
 
 export default {
   name: 'AboutPage',
   components: {
-    Card
+    Card,
+    Heading
   },
   data() {
     return {
@@ -51,7 +52,8 @@ export default {
         {
           title: 'msg group',
           subtitle: 'Current work place',
-          content: 'This is where I started my career and I am happy I did so. My main focus is on reinsurance software.',
+          content:
+            'This is where I started my career and I am happy I did so. My main focus is on reinsurance software.',
           links: [
             {
               url: '',
@@ -61,7 +63,7 @@ export default {
         },
         {
           title: 'Technical University of Cluj-Napoca',
-          subtitle: 'Bachelor\'s Degree',
+          subtitle: "Bachelor's Degree",
           content: '',
           links: [
             {
@@ -71,7 +73,7 @@ export default {
           ]
         },
         {
-          title: 'National College \"Aurel Vlaicu\" Orastie',
+          title: 'National College "Aurel Vlaicu" Orastie',
           subtitle: 'High school',
           content: '',
           links: [
