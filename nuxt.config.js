@@ -26,7 +26,10 @@ export default {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#eece1a' },
+  loading: {
+    color: '#eece1a',
+    height: '4px'
+  },
   /*
   ** Build configuration
   */

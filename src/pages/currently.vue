@@ -20,7 +20,7 @@ import interests from '~/assets/js/interests'
 import InterestsContainer from '~/components/InterestsContainer'
 import Heading from '~/components/Heading'
 
-const threshold = 3
+const threshold = 4
 
 export default {
   name: 'Interests',

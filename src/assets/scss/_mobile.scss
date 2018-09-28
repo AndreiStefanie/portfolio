@@ -1,18 +1,21 @@
+// Ultra-Widescreens
+@include mediaXXl {
+  .flex-item {
+    flex: 1 0 calc(25% - 2em);
+  }
+}
+
 // Widescreens
 @include mediaXl {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
+  .flex-item {
+    flex: 1 0 calc(33% - 2em);
   }
 }
 
 // Desktops & Laptops
 @include mediaLg {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .flex-item {
-    flex: 1 0 45%;
+    flex: 1 0 calc(50% - 2em);
   }
 }
 
@@ -60,7 +63,7 @@
     transform: translate3d(100%, 0, 0);
 
     .portrait {
-      background: url("/img/me.jpg") no-repeat;
+      background: url('/img/me.jpg') no-repeat;
       background-size: cover;
       width: 150px;
       height: 150px;
@@ -68,7 +71,7 @@
   }
 
   .flex-item {
-    flex: 1 0 45%;
+    flex: 0 1 calc(50% - 2em);
   }
 }
 
@@ -86,11 +89,7 @@
     }
   }
 
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
   .flex-item {
-    flex: 1 0 91%;
+    flex: 0 1 calc(100% - 2em);
   }
 }

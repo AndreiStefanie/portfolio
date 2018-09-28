@@ -121,7 +121,7 @@ main {
 .flex-container {
   display: flex;
   flex-flow: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .flex-wrap {
@@ -141,7 +141,7 @@ main {
 }
 
 .flex-item {
-  flex: 1 0 21%;
+  flex: 0 1 calc(33% - 2em);
 }
 
 .w-33 {

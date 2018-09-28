@@ -10,7 +10,7 @@ $transitionDuration: 0.4s;
 
 
 #bg-img {
-  background: $home-image;
+  background: $home-image no-repeat;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
@@ -58,7 +58,13 @@ $transitionDuration: 0.4s;
 }
 
 @mixin mediaXl {
-  @media screen and (min-width: 1171px) {
+  @media screen and (min-width: 1171px) and (max-width: 1499px) {
+    @content;
+  }
+}
+
+@mixin mediaXXl {
+  @media screen and (min-width: 1500px) {
     @content;
   }
 }
