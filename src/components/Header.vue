@@ -1,5 +1,6 @@
 <template>
   <header>
+    <div class="signature" v-if="$route.path!=='/'"><nuxt-link to="/">Andrei <span class="text-secondary">Ștefănie</span></nuxt-link></div>
     <div :class="[ 'menu-btn', { 'close': showMenu } ]" @click="toggleMenu">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -61,3 +62,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.signature {
+  position: absolute;
+  z-index: 3;
+  left: 2rem;
+  top: 2rem;
+  font: italic 1.5rem serif;
+}
+</style>

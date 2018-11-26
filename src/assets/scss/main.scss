@@ -1,5 +1,5 @@
-@import "config";
-@import "menu";
+@import 'config';
+@import 'menu';
 
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
 }
 
@@ -49,6 +49,8 @@ header {
 
 main {
   padding: 4rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
   height: 1;
   min-height: calc(100vh - 2rem - 36px);
   z-index: 1;
@@ -194,4 +196,4 @@ main {
   font-size: 0.9rem;
 }
 
-@import "mobile";
+@import 'mobile';
