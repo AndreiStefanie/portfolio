@@ -12,7 +12,7 @@ export default [
     description: 'Part of an european project. It aims to encourage and facilitate the <strong>reuse</strong> of vacant places. <br/>It was built in roughly 3 months by me together with a small group of highly motivated colleagues.',
     tags: ['Vue', 'nodejs', 'express', 'javascript', 'sequelizejs'],
     image: 'refill.png',
-    website: 'clujrefill.ro'
+    website: 'https://clujrefill.ro'
   },
   {
     name: 'msg.PUMA',
