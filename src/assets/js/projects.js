@@ -1,5 +1,13 @@
 export default [
   {
+    name: 'SlimList',
+    description: 'I built this as a side project because I couldn\'t find a to-do app that just stays out of my way. Also, it was a good opportunity to work with what firebase has to offer (fantastic experience) and get a better understanding of PWA concepts.',
+    tags: ['Vue', 'Material Design', 'Firebase', 'Javascript', 'PWA'],
+    image: 'slimlist.png',
+    website: 'https://slimlist-19a19.firebaseapp.com/',
+    source: 'https://github.com/AndreiStefanie/slimlist-vue'
+  },
+  {
     name: 'Cluj Refill',
     description: 'Part of an european project. It aims to encourage and facilitate the <strong>reuse</strong> of vacant places. <br/>It was built in roughly 3 months by me together with a small group of highly motivated colleagues.',
     tags: ['Vue', 'nodejs', 'express', 'javascript', 'sequelizejs'],
@@ -47,7 +55,7 @@ export default [
   {
     name: 'FileParser',
     description: '',
-    tags: [],
+    tags: ['C++', 'Win32 API', 'DLL'],
     image: '',
     source: 'https://github.com/AndreiStefanie/fileParser'
   }

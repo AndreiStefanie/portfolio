@@ -1,6 +1,10 @@
 <template>
   <header>
-    <div class="signature" v-if="$route.path!=='/'"><nuxt-link to="/">Andrei <span class="text-secondary">Ștefănie</span></nuxt-link></div>
+    <div class="signature" v-if="$route.path!=='/'">
+      <nuxt-link to="/">Andrei
+        <span class="text-secondary">Ștefănie</span>
+      </nuxt-link>
+    </div>
     <div :class="[ 'menu-btn', { 'close': showMenu } ]" @click="toggleMenu">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
@@ -18,9 +22,8 @@
           :to="p.link"
           tag="a"
           :class="[ 'nav-item', { 'current': p.link===$route.path }, 'nav-link', { 'show': showMenu } ]"
-          @click.native="hideMenu">
-          {{ p.name }}
-        </nuxt-link>
+          @click.native="hideMenu"
+        >{{ p.name }}</nuxt-link>
       </ul>
     </nav>
   </header>
@@ -69,6 +72,6 @@ export default {
   z-index: 3;
   left: 2rem;
   top: 2rem;
-  font: italic 1.5rem serif;
+  font: italic 1.1rem serif;
 }
 </style>

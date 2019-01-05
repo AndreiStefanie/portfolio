@@ -17,9 +17,10 @@
         class="flex-item project-bg mb-2"
         :style="!!p.image ? { backgroundImage: `url(/img/${p.image})` } : ''"
         :title="p.name"
-        :subtitle="p.subtitle"
         :content="p.description"
-        :links="p.links"/>
+        :website="p.website"
+        :source="p.source"
+        :tags="p.tags"/>
     </div>
   </main>
 </template>
@@ -30,6 +31,7 @@ import projects from '~/assets/js/projects'
 
 export default {
   name: 'ProjectPage',
+  scrollToTop: true,
   components: {
     Card
   },
@@ -62,7 +64,7 @@ export default {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: rgba(#555, 0.9);
+    background: rgba(#555, 0.8);
   }
 }
 </style>
