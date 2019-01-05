@@ -40,17 +40,17 @@ export default {
 }
 
 .card-title {
-  flex: 0 1 50px;
+  flex: 0 1 15%;
   order: 1;
 }
 
 .card-content {
-  flex: 1 0 50px;
+  flex: 1 0 70%;
   order: 2;
 }
 
 .card-tags {
-  flex: 0 1 50px;
+  flex: 0 1 15%;
   order: 3;
   justify-self: flex-end;
 }
