@@ -6,12 +6,6 @@
       h2="Some of the domains, projects, and activities that I currently focus on"
     />
     <interests-container :interests="mostRecent" class="mb-4 mt-2"/>
-    <!-- <b-btn v-if="old.length > 0" v-b-toggle.collapseI :variant="showOlder ? 'primary' : 'outline-primary'">
-      Show older interests
-    </b-btn>
-    <b-collapse id="collapseI" class="mt-2" v-model="showOlder">
-      <interests-container :interests="old"/>
-    </b-collapse> -->
   </main>
 </template>
 
@@ -30,13 +24,16 @@ export default {
   },
   data() {
     return {
-      interests: interests.sort((i1, i2) => i1.date > i2.date),
+      interests: interests,
       showOlder: false
     }
   },
   computed: {
     mostRecent() {
-      return this.interests.slice(0, threshold)
+      const recentInterests = [...this.interests].sort(
+        (i1, i2) => new Date(i2.date) - new Date(i1.date)
+      )
+      return recentInterests.slice(0, threshold)
     },
     old() {
       return this.interests.slice(threshold)
@@ -45,6 +42,3 @@ export default {
   scrollToTop: true
 }
 </script>
-
-<style>
-</style>
