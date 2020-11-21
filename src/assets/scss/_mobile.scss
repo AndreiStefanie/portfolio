@@ -1,14 +1,14 @@
 // Ultra-Widescreens
 @include mediaXXl {
   .flex-item {
-    flex: 1 0 calc(25% - 2em);
+    flex: 0 0 calc(33% - 1em);
   }
 }
 
 // Widescreens
 @include mediaXl {
   .flex-item {
-    flex: 1 0 calc(33% - 2em);
+    flex: 0 0 calc(33% - 2em);
   }
 }
 

@@ -1,15 +1,28 @@
 <template>
   <div class="job card">
     <h3 class="card-title">{{ title }}</h3>
+    <h5 class="card-title">{{ subtitle }}</h5>
     <p class="card-content" v-html="content"></p>
     <div class="tags-container card-tags">
       <span v-for="t in tags" :key="t" class="tag">{{ t }}</span>
     </div>
     <div class="card-links">
-      <a v-if="website" class="website card-link" :href="website" target="_blank" rel="noopener">
+      <a
+        v-if="website"
+        class="website card-link"
+        :href="website"
+        target="_blank"
+        rel="noopener"
+      >
         <i class="fas fa-external-link-square-alt"></i>
       </a>
-      <a v-if="source" class="source card-link" :href="source" target="_blank" rel="noopener">
+      <a
+        v-if="source"
+        class="source card-link"
+        :href="source"
+        target="_blank"
+        rel="noopener"
+      >
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -30,7 +43,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card {
   display: flex;
   position: relative;
@@ -82,11 +95,11 @@ export default {
 .card-link {
   cursor: pointer;
   margin: 0.4rem;
-  position:relative;
+  position: relative;
   z-index: 4;
 }
 
 .website {
-  position:relative;
+  position: relative;
 }
 </style>

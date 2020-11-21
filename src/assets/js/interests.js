@@ -19,14 +19,23 @@ export default [
   },
   {
     name: 'Web Components (and Polymer)',
-    description: 'After seeing how much attention web components are getting (it turns out pretty much any company that has a decent website uses them; also, google seems to push polymer way harder than angular), I started digging a bit deeper.<br/>Nowadays, people (including me) tend to avoid learning new frameworks mostly because how fast they are changing (this is my guess at least). Polymer doesn\'t feel like that.<br/>Also, other frameworks seem to embrace web components - Vue, for example, supports creating web components with it\'s CLI (the vue library is still needed to run the component, however, it can be integrated just like a native one.',
+    description:
+      "After seeing how much attention web components are getting (it turns out pretty much any company that has a decent website uses them; also, google seems to push polymer way harder than angular), I started digging a bit deeper.<br/>Also, other frameworks seem to embrace web components - Vue, for example, supports creating web components with it's CLI (the vue library is still needed to run the component, however, it can be integrated just like a native one.",
     category: 'IT',
     date: '2018-09-01'
   },
   {
     name: 'DevOps',
-    description: 'After several years of not giving devOps enough attention, I tried to understand how projects that I am involved in can be optimized. It turns out we spent a decent amount of time on repetitive tasks and on fixing screw ups that resulted after a part of a repetitive task was forgotten. With a minimal one-time investment in devOps, the productivity of the team increased considerably. Why? I think the massive confidence boost automation provides is an important factor.',
+    description:
+      'After several years of not giving devOps enough attention, I tried to understand how projects that I am involved in can be optimized. It turns out we spent a decent amount of time on repetitive tasks and on fixing screw ups that resulted after a part of a repetitive task was forgotten. With a minimal one-time investment in devOps, the productivity of the team increased considerably. Why? I think the massive confidence boost automation provides is an important factor.',
     category: 'IT',
     date: '2019-02-19'
+  },
+  {
+    name: 'Cloud',
+    description:
+      'Systems design and cloud are and will be in the foreseeable future my main focus because they enable us to implement even the most ambitious ideas.',
+    category: 'IT',
+    date: '2020-01-01'
   }
 ]
