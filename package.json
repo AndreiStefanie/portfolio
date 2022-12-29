@@ -22,15 +22,15 @@
   "license": "MIT",
   "homepage": "https://github.com/AndreiStefanie/portfolio#readme",
   "dependencies": {
-    "nuxt": "^2.14.7"
+    "nuxt": "^3.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^9.0.0",
     "eslint": "^5.16.0",
     "eslint-friendly-formatter": "^4.0.1",
-    "eslint-loader": "^2.2.1",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-vue": "^4.7.1",
     "node-sass": "^4.14.1",
-    "sass-loader": "^7.3.1"
+    "sass-loader": "^13.2.0"
   }
 }
